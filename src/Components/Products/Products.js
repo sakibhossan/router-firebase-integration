@@ -7,15 +7,14 @@ import app from '../../firebase.init';
 
 const auth = getAuth(app);
 
-const Home = () => {
-   
-     const [user] = useAuthState(auth);
+const Products = () => {
+    const [user] = useAuthState(auth);
     return (
         <div>
-            <h2>this  is home</h2>
-            <p>Currentb user is : { user? user.displayName : 'no body'}</p>
+            <h2>Knock knock who is there</h2>
+            <h5>{user ? user.displayName : " No body"}</h5>
         </div>
     );
 };
 
-export default Home;
+export default Products;
